@@ -1,26 +1,37 @@
 using UnityEngine;
 
+enum Direction {
+    LEFT,
+    RIGHT,
+}
+
 public class Flipper : MonoBehaviour {
 
-    private Rigidbody2D rb;
+    private Rigidbody2D rbFlipper;
 
     [SerializeField]
     private float speed = 1;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    private Direction direction = Direction.LEFT;
+
     void Start() {
-        rb = GetComponent<Rigidbody2D>();
+        rbFlipper = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update() {
-        //if (Input.GetKey(KeyCode.Backspace)) {
-
-        //transform.Rotate(0, 0, 1, Space.Self);
-
-
-        rb.AddTorque(speed, ForceMode2D.Force);
-        //}
+        if (direction == Direction.LEFT) {
+            if (Input.GetKey(KeyCode.K)) {
+                rbFlipper.AddTorque(speed, ForceMode2D.Impulse);
+            } else {
+                rbFlipper.AddTorque(-speed, ForceMode2D.Impulse);
+            }
+        } else {
+            if (Input.GetKey(KeyCode.L)) {
+                rbFlipper.AddTorque(-speed, ForceMode2D.Impulse);
+            } else {
+                rbFlipper.AddTorque(speed, ForceMode2D.Impulse);
+            }
+        }
     }
 
 }

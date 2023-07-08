@@ -2,32 +2,40 @@ using UnityEngine;
 
 public class Pinball : MonoBehaviour {
 
-    Rigidbody2D _rigidbody;
 
     [SerializeField]
-    private float _thrust = 1f;
+    private float thrust = 1f;
 
     [SerializeField]
-    private float _thrustPlunger = 1f;
+    private float thrustPlunger = 1f;
 
-    // Start is called before the first frame update
+    private Rigidbody2D rbPinball;
+    private bool onPlunger = false;
+
     void Start() {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        rbPinball = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update() {
-
-        //print(Input.GetAxisRaw("Vertical"));
-        //print(Input.GetAxisRaw("Horizontal"));
-
         if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0) {
-            _rigidbody.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * _thrust);
-        } else if (Input.GetKeyDown(KeyCode.Space)) {
-            _rigidbody.AddForce(transform.up * _thrustPlunger);
+            rbPinball.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * thrust);
+        } else if (onPlunger && Input.GetKeyDown(KeyCode.Space)) {
+            rbPinball.AddForce(transform.up * thrustPlunger);
         }
+    }
 
-        print(_rigidbody.velocity);
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Plunger") {
+            onPlunger = true;
+        } else if (collision.gameObject.tag == "Deathzone") {
+            Debug.Log("FINISH");
+            GameSystem.Instance.gameIsFinished = true;
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Plunger") {
+            onPlunger = false;
+        }
     }
 }
