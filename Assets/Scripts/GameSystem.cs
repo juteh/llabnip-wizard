@@ -27,7 +27,7 @@ public class GameSystem : MonoBehaviour {
     }
 
     public void AddPoints(int points) {
-        this.points = points;
-        scoreText.text = points + " Points";
+        this.points += points;
+        scoreText.text = this.points + " Points";
     }
 }
