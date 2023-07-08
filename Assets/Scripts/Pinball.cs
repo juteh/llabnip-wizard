@@ -29,6 +29,7 @@ public class Pinball : MonoBehaviour {
             onPlunger = true;
         } else if (collision.gameObject.CompareTag("Deathzone")) {
             GameSystem.Instance.gameIsFinished = true;
+            SceneController.Instance.LoadSceneByName("FinishScene");
         }
     }
 
@@ -40,7 +41,6 @@ public class Pinball : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Obstacle")) {
-            int points = collision.gameObject.GetComponent<Obstacle>().points;
             GameSystem.Instance.AddPoints(collision.gameObject.GetComponent<Obstacle>().points);
         }
     }

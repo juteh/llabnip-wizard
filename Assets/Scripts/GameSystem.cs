@@ -5,10 +5,9 @@ public class GameSystem : MonoBehaviour {
 
     [SerializeField] TextMeshProUGUI scoreText;
 
-
     public bool gameIsFinished { get; set; } = false;
 
-    private int points = 0;
+    public int points { get; set; } = 0;
 
     public static GameSystem Instance {
         get; private set;
@@ -20,14 +19,10 @@ public class GameSystem : MonoBehaviour {
         }
 
         Instance = this;
-    }
-
-    void Start() {
-        scoreText.text = points + " Points";
+        DontDestroyOnLoad(this);
     }
 
     public void AddPoints(int points) {
         this.points += points;
-        scoreText.text = this.points + " Points";
     }
 }
