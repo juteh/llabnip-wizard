@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plunger
   - Deathzone
+  - Obstacle
   layers:
   - Default
   - TransparentFX
