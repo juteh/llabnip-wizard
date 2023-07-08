@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,53 +122,53 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 513
+        height: 513
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 18, y: 22, z: 21, w: 16}
+      border: {x: 72, y: 72, z: 72, w: 72}
       outline:
-      - - {x: -128, y: 128}
-        - {x: -128, y: -128}
-        - {x: 128, y: -128}
-        - {x: 128, y: 128}
-      - - {x: -79, y: 80}
-        - {x: 76, y: 80}
-        - {x: 76, y: -75}
-        - {x: -79, y: -75}
-      physicsShape: []
-      tessellationDetail: 0.24
+      - - {x: -256.5, y: 256.5}
+        - {x: -256.5, y: -256.5}
+        - {x: 256.5, y: -256.5}
+        - {x: 256.5, y: 256.5}
+      - - {x: -160.5, y: 162.5}
+        - {x: 154.5, y: 162.5}
+        - {x: 154.5, y: -152.5}
+        - {x: -160.5, y: -152.5}
+      physicsShape:
+      - - {x: -230.5, y: 235.5}
+        - {x: -233.5, y: 232.5}
+        - {x: -233.5, y: -222.5}
+        - {x: -231.5, y: -224.5}
+        - {x: 224.5, y: -224.5}
+        - {x: 226.5, y: -222.5}
+        - {x: 226.5, y: 233.5}
+        - {x: 224.5, y: 235.5}
+      - - {x: -207.5, y: 209.5}
+        - {x: 201.5, y: 209.5}
+        - {x: 201.5, y: -199.5}
+        - {x: -207.5, y: -199.5}
+      tessellationDetail: 0
       bones: []
-      spriteID: 33ebe0b340780a442898be5163f0b4d7
-      internalID: 823926471
+      spriteID: 09adf66fc25051c4ba4bdbb86ccfb6e4
+      internalID: 971328253
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: 0, y: 128}
-      - {x: -128, y: -0.0000055950577}
-      - {x: 0.000011190115, y: -128}
-      - {x: 128, y: 0.0000015263847}
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BlueSquare_8: 271941053
-      BlueSquare_1: 1741405049
-      BlueSquare_5: -631971783
-      BlueSquare_2: 1445826129
-      BlueSquare_7: -1565128385
-      BlueSquare_3: 264350166
-      BlueSquare_6: -528387342
-      BlueSquare_4: 406341752
-      BlueSquare_0: 823926471
+      BlueSquare_0: 971328253
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
