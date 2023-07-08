@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0755684, g: 0.08492052, b: 0.10838387, a: 1}
+  m_IndirectSpecularColor: {r: 0.07602581, g: 0.0853759, b: 0.10904994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -197,15 +197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4815493269465659076, guid: 6d05f6d29216ced42a4a43779f3f650f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.892876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4815493269465659076, guid: 6d05f6d29216ced42a4a43779f3f650f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.257639
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4815493269465659076, guid: 6d05f6d29216ced42a4a43779f3f650f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.11727744
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4815493269465659076, guid: 6d05f6d29216ced42a4a43779f3f650f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1582,7 +1582,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -16.273998, y: 10.838367}
-      - {x: 1.5485905, y: 10.834839}
+      - {x: 1.5485946, y: 10.834839}
       - {x: 1.935106, y: -9.9340725}
       - {x: 0.73163617, y: -9.93865}
       - {x: 0.742486, y: -9.274962}
@@ -2329,7 +2329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3655840678201178651, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.28
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3655840678201178651, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
@@ -3551,6 +3551,14 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6197342783338353461, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
+      propertyPath: leftFlipper
+      value: 
+      objectReference: {fileID: 1022262644}
+    - target: {fileID: 6197342783338353461, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
+      propertyPath: rightFlipper
+      value: 
+      objectReference: {fileID: 8180632381444918036}
+    - target: {fileID: 6197342783338353461, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
       propertyPath: thrustPlunger
       value: 10000
       objectReference: {fileID: 0}
@@ -3673,6 +3681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1708869551}
     m_Modifications:
+    - target: {fileID: 529635409, guid: 194bd2684c6f30a4bb2e8cf8e1af9831, type: 3}
+      propertyPath: m_Size.x
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7877604273665792760, guid: 194bd2684c6f30a4bb2e8cf8e1af9831, type: 3}
       propertyPath: m_Size.x
       value: 6
@@ -3931,6 +3943,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1708869551}
     m_Modifications:
+    - target: {fileID: 459709283, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_Size.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 459709283, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2077758769330689232, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3999,6 +4019,38 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.71999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.71999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.71999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.71999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077758769330689234, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.13
+      objectReference: {fileID: 0}
     - target: {fileID: 2077758769330689235, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
       propertyPath: m_Name
       value: FlipperRight
@@ -4041,3 +4093,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+--- !u!1 &8180632381444918036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2077758769330689235, guid: fa2b0edd0fa639a44b69ad22ee84accb, type: 3}
+  m_PrefabInstance: {fileID: 8180632381444918035}
+  m_PrefabAsset: {fileID: 0}

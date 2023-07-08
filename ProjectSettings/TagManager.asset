@@ -7,6 +7,9 @@ TagManager:
   - Plunger
   - Deathzone
   - Obstacle
+  - Flipper
+  - RightFlipper
+  - LeftFlipper
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Pinball : MonoBehaviour {
@@ -8,6 +9,12 @@ public class Pinball : MonoBehaviour {
 
     [SerializeField]
     private float thrustPlunger = 1f;
+
+    [SerializeField]
+    private GameObject rightFlipper;
+
+    [SerializeField]
+    private GameObject leftFlipper;
 
     private Rigidbody2D rbPinball;
     private bool onPlunger = false;
@@ -27,14 +34,22 @@ public class Pinball : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Plunger")) {
             onPlunger = true;
+            StartCoroutine(UsePlunger());
         } else if (collision.gameObject.CompareTag("Deathzone")) {
             GameSystem.Instance.gameIsFinished = true;
             SceneController.Instance.LoadSceneByName("FinishScene");
+        } else if (collision.gameObject.CompareTag("RightFlipper")) {
+            Debug.Log("RightFlipper");
+            rightFlipper.GetComponent<Flipper>().StartMoving();
+        } else if (collision.gameObject.CompareTag("LeftFlipper")) {
+            Debug.Log("LeftFlipper");
+            leftFlipper.GetComponent<Flipper>().StartMoving();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Plunger")) {
+            StopAllCoroutines();
             onPlunger = false;
         }
     }
@@ -43,5 +58,10 @@ public class Pinball : MonoBehaviour {
         if (collision.gameObject.CompareTag("Obstacle")) {
             GameSystem.Instance.AddPoints(collision.gameObject.GetComponent<Obstacle>().points);
         }
+    }
+
+    private IEnumerator UsePlunger() {
+        yield return new WaitForSeconds(0.5f);
+        rbPinball.AddForce(transform.up * thrustPlunger);
     }
 }
