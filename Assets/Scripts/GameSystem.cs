@@ -1,9 +1,6 @@
-using TMPro;
 using UnityEngine;
 
 public class GameSystem : MonoBehaviour {
-
-    [SerializeField] TextMeshProUGUI scoreText;
 
     public bool gameIsFinished { get; set; } = false;
 
