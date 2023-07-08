@@ -681,13 +681,13 @@ BoxCollider2D:
     border: {x: 0.71999997, y: 0.71999997, z: 0.71999997, w: 0.71999997}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.13, y: 5.13}
-    newSize: {x: 0.79, y: 20.72}
+    newSize: {x: 1, y: 20}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 20}
   m_EdgeRadius: 0
 --- !u!212 &740762275
 SpriteRenderer:
@@ -735,7 +735,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.79, y: 20.72}
+  m_Size: {x: 1, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -749,7 +749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740762273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50.17, y: 27.6, z: 0}
+  m_LocalPosition: {x: 49.81, y: 27.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1650,13 +1650,13 @@ BoxCollider2D:
     border: {x: 0.71999997, y: 0.71999997, z: 0.71999997, w: 0.71999997}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.13, y: 5.13}
-    newSize: {x: 1, y: 56}
+    newSize: {x: 1, y: 40}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 55}
+  m_Size: {x: 1, y: 40}
   m_EdgeRadius: 0
 --- !u!212 &1113533804
 SpriteRenderer:
@@ -1704,7 +1704,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 56}
+  m_Size: {x: 1, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1718,7 +1718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113533802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.969997, y: 29.41, z: 0}
+  m_LocalPosition: {x: 51.969997, y: 37.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2321,7 +2321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3655840678201178651, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
       propertyPath: orthographic size
-      value: 28.857933
+      value: 28.73
       objectReference: {fileID: 0}
     - target: {fileID: 3655840678201178651, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -2329,6 +2329,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3655840678201178651, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655840678201178651, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3655840678201178852, guid: afd50e95cc721144e92f2a402dd0300f, type: 3}
@@ -2417,7 +2421,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
-  m_AutoTiling: 1
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 55}
   m_EdgeRadius: 0
@@ -2948,7 +2952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017734674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.72, y: 9.67, z: 0}
+  m_LocalPosition: {x: 50.9, y: 9.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2973,13 +2977,13 @@ BoxCollider2D:
     border: {x: 0.71999997, y: 0.71999997, z: 0.71999997, w: 0.71999997}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.13, y: 5.13}
-    newSize: {x: 2, y: 16}
+    newSize: {x: 3, y: 17}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 16}
+  m_Size: {x: 3, y: 17}
   m_EdgeRadius: 0
 --- !u!212 &2017734677
 SpriteRenderer:
@@ -3027,7 +3031,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 2, y: 16}
+  m_Size: {x: 3, y: 17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3548,7 +3552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197342783338353461, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
       propertyPath: thrustPlunger
-      value: 100000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 6197342783338353463, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
       propertyPath: m_RootOrder
