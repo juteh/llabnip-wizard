@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void RestartLevel() {
+        GameSystem.Instance.points = 0;
         SceneController.Instance.LoadSceneByName("SampleScene");
     }
 }

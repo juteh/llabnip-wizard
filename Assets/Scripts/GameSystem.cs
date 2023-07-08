@@ -22,14 +22,7 @@ public class GameSystem : MonoBehaviour {
         DontDestroyOnLoad(this);
     }
 
-    void Start() {
-        if (scoreText != null) {
-            scoreText.text = points + " Points";
-        }
-    }
-
     public void AddPoints(int points) {
         this.points += points;
-        scoreText.text = this.points + " Points";
     }
 }
