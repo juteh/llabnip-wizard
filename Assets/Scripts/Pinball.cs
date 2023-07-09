@@ -27,10 +27,13 @@ public class Pinball : MonoBehaviour {
     [SerializeField]
     private float megaThrust = 50f;
 
+    [SerializeField]
+    private float holdTime = 0.5f;
+
     private Rigidbody2D rbPinball;
     private SpriteRenderer srPinball;
     private float startTime = 0f;
-    private float holdTime = 1.5f;
+
     private bool megaThrustReady = false;
 
     void Start() {
