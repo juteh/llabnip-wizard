@@ -16,6 +16,9 @@ public class Pinball : MonoBehaviour {
     [SerializeField]
     private GameObject leftFlipper;
 
+    [SerializeField]
+    private float maxSpeedBall = 50;
+
     private Rigidbody2D rbPinball;
     private bool onPlunger = false;
 
@@ -29,6 +32,7 @@ public class Pinball : MonoBehaviour {
         } else if (onPlunger && Input.GetKeyDown(KeyCode.Space)) {
             rbPinball.AddForce(transform.up * thrustPlunger);
         }
+        rbPinball.velocity = new Vector3(Mathf.Clamp(rbPinball.velocity.x, -maxSpeedBall, maxSpeedBall), Mathf.Clamp(rbPinball.velocity.y, -maxSpeedBall, maxSpeedBall));
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
