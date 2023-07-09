@@ -20,36 +20,17 @@ public class Flipper : MonoBehaviour {
         rbFlipper = GetComponent<Rigidbody2D>();
         StartCoroutine(MoveDown());
     }
-    void FixedUpdate() {
-        if (direction == Direction.LEFT) {
-            if (Input.GetKey(KeyCode.K)) {
-                //rbFlipper.AddTorque(speed, ForceMode2D.Impulse);
-                StartCoroutine(MoveUp());
-            } else {
-                //rbFlipper.AddTorque(-speed, ForceMode2D.Impulse);
-            }
-        } else {
-            if (Input.GetKey(KeyCode.L)) {
-                StartCoroutine(MoveUp());
-                //rbFlipper.AddTorque(-speed, ForceMode2D.Impulse);
-            } else {
-                //rbFlipper.AddTorque(speed, ForceMode2D.Impulse);
-            }
-        }
-    }
-
 
     public void StartMoving() {
         StartCoroutine(MoveUp());
     }
 
     private IEnumerator MoveUp() {
-        while (gameObject.transform.eulerAngles.z > 136) {
-            if (direction == Direction.LEFT) {
-                rbFlipper.AddTorque(speed, ForceMode2D.Impulse);
-            } else {
-                rbFlipper.AddTorque(-speed, ForceMode2D.Impulse);
-            }
+        if (direction == Direction.LEFT) {
+            rbFlipper.AddTorque(speed * 10, ForceMode2D.Impulse);
+            yield return new WaitForFixedUpdate();
+        } else {
+            rbFlipper.AddTorque(-speed * 10, ForceMode2D.Impulse);
             yield return new WaitForFixedUpdate();
         }
         yield return new WaitForSeconds(0.5f);
@@ -57,12 +38,11 @@ public class Flipper : MonoBehaviour {
     }
 
     private IEnumerator MoveDown() {
-        while (gameObject.transform.eulerAngles.z < 209) {
-            if (direction == Direction.LEFT) {
-                rbFlipper.AddTorque(-speed, ForceMode2D.Impulse);
-            } else {
-                rbFlipper.AddTorque(speed, ForceMode2D.Impulse);
-            }
+        if (direction == Direction.LEFT) {
+            rbFlipper.AddTorque(-speed * 3, ForceMode2D.Impulse);
+            yield return new WaitForFixedUpdate();
+        } else {
+            rbFlipper.AddTorque(speed * 3, ForceMode2D.Impulse);
             yield return new WaitForFixedUpdate();
         }
         yield return new WaitForSeconds(0.5f);
