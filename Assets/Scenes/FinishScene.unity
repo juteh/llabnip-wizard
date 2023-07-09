@@ -1582,8 +1582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.1, y: -147}
-  m_SizeDelta: {x: 285.6142, y: 214.04}
+  m_AnchoredPosition: {x: 5.1, y: -135.90997}
+  m_SizeDelta: {x: 285.6142, y: 236.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957521072
 MonoBehaviour:
@@ -1608,7 +1608,10 @@ MonoBehaviour:
   m_text: 'Use the Arrow-Keys or WASD to Controll the Ball.
 
     Avoid the Green
-    Targets and reach the Gutter with the lowest Score possible!'
+    Targets and reach the Gutter with the lowest Score possible!
+
+    Hold Shift
+    to charge Boost'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e248a32172d768d49b2087c7b1f3ccdb, type: 2}
   m_sharedMaterial: {fileID: -5346478104817416185, guid: e248a32172d768d49b2087c7b1f3ccdb, type: 2}
