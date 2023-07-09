@@ -20,12 +20,16 @@ public class AudioManager : MonoBehaviour {
     [Header("Sound: Music")]
     [SerializeField] AudioClip music;
 
+    [Header("Sound: Boost")]
+    [SerializeField] AudioClip boost;
+
     AudioSource flipperMoveAudioSource;
     AudioSource ballOutAudioSource;
     AudioSource bumperCollisionAudioSource;
     AudioSource enviromentCollisionAudioSource;
     AudioSource flipperCollisionAudioSource;
     AudioSource musicAudioSource;
+    AudioSource boostAudioSource;
 
     public static AudioManager Instance {
         get; private set;
@@ -58,6 +62,10 @@ public class AudioManager : MonoBehaviour {
                 case "MusicAudioSource":
                     musicAudioSource = audioSource;
                     musicAudioSource.clip = music;
+                    break;
+                case "BoostAudioSource":
+                    boostAudioSource = audioSource;
+                    boostAudioSource.clip = boost;
                     break;
                 default:
                     break;
@@ -98,6 +106,10 @@ public class AudioManager : MonoBehaviour {
 
     public void PlayflipperMove() {
         flipperMoveAudioSource.Play();
+    }
+
+    public void PlayBoost() {
+        boostAudioSource.Play();
     }
 }
 

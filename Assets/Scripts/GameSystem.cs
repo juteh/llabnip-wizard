@@ -6,6 +6,8 @@ public class GameSystem : MonoBehaviour {
 
     public int points { get; set; } = 0;
 
+    public ChargeStatus chargeStatus { get; set; } = ChargeStatus.NOT_LOADING;
+
     public static GameSystem Instance {
         get; private set;
     }
