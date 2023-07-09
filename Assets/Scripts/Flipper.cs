@@ -18,7 +18,8 @@ public class Flipper : MonoBehaviour {
 
     void Start() {
         rbFlipper = GetComponent<Rigidbody2D>();
-        StartCoroutine(MoveDown());
+        //StartCoroutine(MoveDown());
+        StartMoving();
     }
 
     public void StartMoving() {

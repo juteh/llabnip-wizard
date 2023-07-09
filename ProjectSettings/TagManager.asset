@@ -10,6 +10,7 @@ TagManager:
   - Flipper
   - RightFlipper
   - LeftFlipper
+  - Enviroment
   layers:
   - Default
   - TransparentFX

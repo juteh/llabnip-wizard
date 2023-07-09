@@ -36,13 +36,14 @@ public class Pinball : MonoBehaviour {
             onPlunger = true;
             StartCoroutine(UsePlunger());
         } else if (collision.gameObject.CompareTag("Deathzone")) {
+            AudioManager.Instance.PlayBallOut();
             GameSystem.Instance.gameIsFinished = true;
             SceneController.Instance.LoadSceneByName("FinishScene");
         } else if (collision.gameObject.CompareTag("RightFlipper")) {
-            Debug.Log("RightFlipper");
+            AudioManager.Instance.PlayflipperMove();
             rightFlipper.GetComponent<Flipper>().StartMoving();
         } else if (collision.gameObject.CompareTag("LeftFlipper")) {
-            Debug.Log("LeftFlipper");
+            AudioManager.Instance.PlayflipperMove();
             leftFlipper.GetComponent<Flipper>().StartMoving();
         }
     }
@@ -56,7 +57,13 @@ public class Pinball : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Obstacle")) {
+            AudioManager.Instance.BumperCollision();
             GameSystem.Instance.AddPoints(collision.gameObject.GetComponent<Obstacle>().points);
+
+        } else if (collision.gameObject.CompareTag("Flipper")) {
+            AudioManager.Instance.PlayFlipperCollision();
+        } else {
+            AudioManager.Instance.PlayEnviromentCollision();
         }
     }
 
