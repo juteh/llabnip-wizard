@@ -42,7 +42,7 @@ public class Pinball : MonoBehaviour {
     }
 
     void Update() {
-        if (!(Input.GetKey(KeyCode.LeftShift)) && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)) {
+        if (!Input.GetKey(KeyCode.LeftShift) && (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)) {
             rbPinball.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * thrust);
         }
         if (Input.GetKeyDown(KeyCode.LeftShift)) {

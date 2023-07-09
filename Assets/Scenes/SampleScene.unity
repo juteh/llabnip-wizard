@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0755684, g: 0.08492052, b: 0.10838387, a: 1}
+  m_IndirectSpecularColor: {r: 0.07602581, g: 0.0853759, b: 0.10904994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2075,6 +2075,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1708869551}
     m_Modifications:
+    - target: {fileID: 297096032159176849, guid: 4e40934388111e54d980dd57633eff0e, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[36].x
+      value: 0.19518073
+      objectReference: {fileID: 0}
+    - target: {fileID: 297096032159176850, guid: 4e40934388111e54d980dd57633eff0e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 297096032159176862, guid: 4e40934388111e54d980dd57633eff0e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2333,7 +2341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287639447852286270, guid: ee65ea86916442342989f5fb995142cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 34.47
+      value: 31.76
       objectReference: {fileID: 0}
     - target: {fileID: 2287639447852286270, guid: ee65ea86916442342989f5fb995142cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3664,7 +3672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197342783338353461, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
       propertyPath: thrust
-      value: 5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6197342783338353461, guid: 4054a2633574fad47a1844f47a30bcb3, type: 3}
       propertyPath: holdTime
